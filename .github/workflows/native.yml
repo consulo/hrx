@@ -1,0 +1,130 @@
+name: Native
+
+# Builds and tests hrx on every supported OS/arch and uploads one archive per platform.
+# GraalVM native-image can not cross-compile, so every platform needs its own runner.
+on:
+  workflow_call:
+    inputs:
+      ref:
+        description: Commit of this repository to build
+        type: string
+        default: ''
+      http-client-ref:
+        description: Branch, tag or commit of consulo/consulo-http-client providing the api and script-rhino modules
+        type: string
+        default: master
+
+jobs:
+  native:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.runner }}
+    continue-on-error: ${{ matrix.experimental }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: linux-x86_64
+            runner: ubuntu-24.04
+            experimental: false
+          - name: linux-aarch64
+            runner: ubuntu-24.04-arm
+            experimental: false
+          - name: macos-aarch64
+            runner: macos-15
+            experimental: false
+          - name: macos-x86_64
+            runner: macos-15-intel
+            experimental: false
+          - name: windows-x86_64
+            runner: windows-2025
+            experimental: false
+          # GraalVM support for Windows on ARM is not final yet
+          - name: windows-aarch64
+            runner: windows-11-arm
+            experimental: true
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+
+      - name: Checkout consulo-http-client
+        uses: actions/checkout@v4
+        with:
+          repository: consulo/consulo-http-client
+          ref: ${{ inputs.http-client-ref }}
+          path: .deps/consulo-http-client
+
+      - name: Set up GraalVM
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '25'
+          distribution: graalvm-community
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          cache: gradle
+
+      - name: Cache Maven repository
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: m2-${{ matrix.name }}-${{ hashFiles('.deps/consulo-http-client/**/pom.xml') }}
+          restore-keys: m2-${{ matrix.name }}-
+
+      # api (parser, execution) and script-rhino (JS engine), installed to ~/.m2 for the Gradle build
+      - name: Build consulo-http-client modules
+        working-directory: .deps/consulo-http-client
+        run: mvn -B -U -q -DskipTests -pl api,script-rhino -am install
+
+      # use the GraalVM from setup-graalvm, never a downloaded toolchain
+      - name: Configure Gradle toolchains
+        run: |
+          mkdir -p ~/.gradle
+          {
+            echo "org.gradle.java.installations.auto-download=false"
+            echo "org.gradle.java.installations.auto-detect=false"
+            echo "org.gradle.java.installations.fromEnv=JAVA_HOME,GRAALVM_HOME"
+          } >> ~/.gradle/gradle.properties
+
+      - name: Test (JVM and installed distribution)
+        run: ./gradlew --no-daemon check
+
+      - name: Build native image
+        run: ./gradlew --no-daemon nativeCompile
+
+      - name: Test native image
+        run: ./gradlew --no-daemon nativeCliTest
+
+      - name: Package
+        id: package
+        run: |
+          version=$(tr -d '[:space:]' < version.txt)
+          dir="hrx-${version}-${{ matrix.name }}"
+          mkdir -p "dist/${dir}"
+          cp LICENSE.txt NOTICE.txt "dist/${dir}/"
+          if [[ "${{ runner.os }}" == "Windows" ]]; then
+            cp build/native/nativeCompile/hrx.exe "dist/${dir}/"
+            archive="${dir}.zip"
+            (cd dist && 7z a -tzip "${archive}" "${dir}" > /dev/null)
+          else
+            cp build/native/nativeCompile/hrx "dist/${dir}/"
+            archive="${dir}.tar.gz"
+            (cd dist && tar -czf "${archive}" "${dir}")
+          fi
+          echo "archive=dist/${archive}" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hrx-${{ matrix.name }}
+          path: ${{ steps.package.outputs.archive }}
+          if-no-files-found: error
+
+      - name: Upload test reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports-${{ matrix.name }}
+          path: build/reports/tests/

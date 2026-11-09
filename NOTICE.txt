@@ -1,0 +1,65 @@
+hrx - command line client for .http files
+Copyright 2013-2026 consulo.io
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this software except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+---------------------------------------------------------------------------
+Origin of the code
+---------------------------------------------------------------------------
+
+ * Consulo platform https://github.com/consulo/consulo - Apache 2.
+   The package consulo.httpClient.cli.http is copied from the module
+   consulo-http-impl (consulo.http.impl.internal) of the platform.
+ * HTTP Client plugin https://github.com/consulo/consulo-http-client - parser,
+   request execution and the handler script engine are used from it.
+   Initial code from https://github.com/jufeng98/HttpClient - MIT License,
+   Copyright (c) 2024 梁煜东
+
+---------------------------------------------------------------------------
+Third-party software
+---------------------------------------------------------------------------
+
+hrx is distributed as a single executable (GraalVM native image) and as a
+JVM distribution. Both contain the following software:
+
+ * Mozilla Rhino https://github.com/mozilla/rhino - Mozilla Public License 2.0.
+   Source code: https://github.com/mozilla/rhino/tree/Rhino1_7_15_Release
+ * crypto-js https://github.com/brix/crypto-js - MIT License,
+   Copyright (c) 2009-2013 Jeff Mott, Copyright (c) 2013-2016 Evan Vosberg
+ * picocli https://picocli.info - Apache 2
+ * Gson https://github.com/google/gson - Apache 2
+ * Guava https://github.com/google/guava - Apache 2
+ * Apache Commons Lang, Apache Commons Codec, Apache HttpComponents
+   https://commons.apache.org https://hc.apache.org - Apache 2
+ * gRPC Java https://github.com/grpc/grpc-java - Apache 2
+ * Netty https://netty.io - Apache 2
+ * Protocol Buffers https://github.com/protocolbuffers/protobuf - BSD 3-Clause,
+   Copyright 2008 Google Inc.
+ * Google common protos, Perfmark, J2ObjC annotations, Android annotations,
+   jsr305 - Apache 2
+ * fastutil https://fastutil.di.unimi.it - Apache 2
+ * Jackson core https://github.com/FasterXML/jackson-core - Apache 2
+ * DSL-JSON https://github.com/ngs-doo/dsl-json - BSD 3-Clause
+ * JDOM https://www.jdom.org - JDOM license (Apache-style, without the
+   acknowledgment clause)
+ * SLF4J https://www.slf4j.org - MIT License (jcl-over-slf4j - Apache 2)
+ * Jakarta Inject - Apache 2; Jakarta Annotations - EPL 2.0 or GPL 2 with
+   Classpath Exception
+ * JSpecify, API Guardian - Apache 2; NullAway annotations, Animal Sniffer
+   annotations - MIT License
+ * GNU Trove (trove4j) https://bitbucket.org/trove4j/trove - GNU Lesser
+   General Public License 2.1
+
+The native executable also contains parts of the Java runtime and of the
+GraalVM / Mandrel Native Image runtime (Substrate VM), licensed under the
+GNU General Public License version 2 with the Classpath Exception.

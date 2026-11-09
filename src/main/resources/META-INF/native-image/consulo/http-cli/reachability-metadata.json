@@ -1,0 +1,1661 @@
+{
+  "reflection": [
+    {
+      "type": "android.os.Build$VERSION"
+    },
+    {
+      "type": "com.sun.crypto.provider.AESCipher$General",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.ARCFOURCipher",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.ChaCha20Cipher$ChaCha20Poly1305",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.DESCipher",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.DESedeCipher",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.DHParameters",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.GaloisCounterMode$AESGCM",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.ML_KEM_Impls$KF3",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.ML_KEM_Impls$KF5",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.TlsMasterSecretGenerator",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "consulo.application.PowerSaveModeListener_Binding"
+    },
+    {
+      "type": "consulo.application.PowerSaveMode_Binding"
+    },
+    {
+      "type": "consulo.application.eap.EarlyAccessProgramManager_Binding"
+    },
+    {
+      "type": "consulo.application.internal.AppLifecycleListener_Binding"
+    },
+    {
+      "type": "consulo.application.internal.FoundationLoader_Binding"
+    },
+    {
+      "type": "consulo.application.internal.ProgressSuspenderListener_Binding"
+    },
+    {
+      "type": "consulo.application.internal.dateTime.DateTimeFormatCache_Binding"
+    },
+    {
+      "type": "consulo.application.internal.dateTime.LCTimeDateTimeFormatProvider_Binding"
+    },
+    {
+      "type": "consulo.application.plugin.PluginActionListener_Binding"
+    },
+    {
+      "type": "consulo.application.ui.event.UISettingsListener_Binding"
+    },
+    {
+      "type": "consulo.application.ui.internal.InternalActionGroup_Binding"
+    },
+    {
+      "type": "consulo.application.ui.internal.InternalUIActionGroup_Binding"
+    },
+    {
+      "type": "consulo.application.util.DateTimeFormatManager_Binding"
+    },
+    {
+      "type": "consulo.bookmark.event.BookmarksListener_Binding"
+    },
+    {
+      "type": "consulo.codeEditor.internal.EditorMouseHoverPopupControl_Binding"
+    },
+    {
+      "type": "consulo.colorScheme.event.EditorColorsListener_Binding"
+    },
+    {
+      "type": "consulo.component.impl.internal.inject.DefaultRootInjectingContainerFactory"
+    },
+    {
+      "type": "consulo.component.util.SimpleModificationTracker"
+    },
+    {
+      "type": "consulo.configurable.internal.UnifiedConfigurableForeignComponentSearch_Binding"
+    },
+    {
+      "type": "consulo.content.base.BinariesOrderRootType_Binding"
+    },
+    {
+      "type": "consulo.content.base.DocumentationOrderRootType_Binding"
+    },
+    {
+      "type": "consulo.content.base.ExcludedContentFolderTypeProvider_Binding"
+    },
+    {
+      "type": "consulo.content.base.GeneratedContentFolderPropertyProvider_Binding"
+    },
+    {
+      "type": "consulo.content.base.SourcesOrderRootType_Binding"
+    },
+    {
+      "type": "consulo.content.base.WebResourcesFolderTypeProvider_Binding"
+    },
+    {
+      "type": "consulo.content.bundle.event.SdkTableListener_Binding"
+    },
+    {
+      "type": "consulo.diff.internal.DiffSettingsHolder_Binding"
+    },
+    {
+      "type": "consulo.disposer.internal.impl.DisposerInternalImpl"
+    },
+    {
+      "type": "consulo.document.event.DocumentBulkUpdateListener_Binding"
+    },
+    {
+      "type": "consulo.document.event.DocumentListener[]"
+    },
+    {
+      "type": "consulo.document.event.FileDocumentManagerListener_Binding"
+    },
+    {
+      "type": "consulo.document.impl.DocumentFactoryImpl_Binding"
+    },
+    {
+      "type": "consulo.document.impl.DocumentReferenceManagerImpl_Binding"
+    },
+    {
+      "type": "consulo.document.impl.LockFreeCOWSortedArray",
+      "fields": [
+        {
+          "name": "listeners"
+        }
+      ]
+    },
+    {
+      "type": "consulo.execution.configuration.log.LogConsolePreferences_Binding"
+    },
+    {
+      "type": "consulo.execution.dashboard.RunDashboardListener_Binding"
+    },
+    {
+      "type": "consulo.execution.event.ExecutionListener_Binding"
+    },
+    {
+      "type": "consulo.execution.event.ExecutionTargetListener_Binding"
+    },
+    {
+      "type": "consulo.execution.event.RunManagerListener_Binding"
+    },
+    {
+      "type": "consulo.execution.executor.DefaultRunExecutor_Binding"
+    },
+    {
+      "type": "consulo.execution.internal.ExecutionNotificationGroupHolder_Binding"
+    },
+    {
+      "type": "consulo.execution.internal.runAnything.RunAnythingNotificationGroupContributor_Binding"
+    },
+    {
+      "type": "consulo.execution.process.ColoredOutputTypeRegistry_Binding"
+    },
+    {
+      "type": "consulo.execution.runner.BasicProgramRunner_Binding"
+    },
+    {
+      "type": "consulo.execution.service.ServiceEventListener_Binding"
+    },
+    {
+      "type": "consulo.execution.ui.event.RunContentWithExecutorListener_Binding"
+    },
+    {
+      "type": "consulo.externalService.ExternalServiceConfigurationListener_Binding"
+    },
+    {
+      "type": "consulo.externalService.internal.ApplicationStatisticsPersistenceComponent_Binding"
+    },
+    {
+      "type": "consulo.fileEditor.event.FileEditorManagerBeforeListener_Binding"
+    },
+    {
+      "type": "consulo.fileEditor.event.FileEditorManagerListener_Binding"
+    },
+    {
+      "type": "consulo.fileEditor.history.RecentPlacesListener_Binding"
+    },
+    {
+      "type": "consulo.find.FindModelListener_Binding"
+    },
+    {
+      "type": "consulo.httpClient.HttpFileTypeFactory_Binding"
+    },
+    {
+      "type": "consulo.httpClient.cli.HttpCliCommand",
+      "fields": [
+        {
+          "name": "myConnectTimeoutMillis"
+        },
+        {
+          "name": "myDockerMode"
+        },
+        {
+          "name": "myEnvFile"
+        },
+        {
+          "name": "myEnvironment"
+        },
+        {
+          "name": "myFailFast"
+        },
+        {
+          "name": "myFiles"
+        },
+        {
+          "name": "myInsecure"
+        },
+        {
+          "name": "myLogLevel"
+        },
+        {
+          "name": "myNoRedirect"
+        },
+        {
+          "name": "myPrivateEnvFile"
+        },
+        {
+          "name": "myPrivateVariables"
+        },
+        {
+          "name": "myProxy"
+        },
+        {
+          "name": "myPublicVariables"
+        },
+        {
+          "name": "myReportDirectory"
+        },
+        {
+          "name": "myRequestNames"
+        },
+        {
+          "name": "mySocketTimeoutMillis"
+        },
+        {
+          "name": "myStacktrace"
+        }
+      ]
+    },
+    {
+      "type": "consulo.httpClient.cli.HttpCliCommand$VersionProvider",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "consulo.httpClient.cli.HttpCliLocalizeManager"
+    },
+    {
+      "type": "consulo.httpClient.script.rhino.RhinoJsExecutorFactory_Binding"
+    },
+    {
+      "type": "consulo.language.codeStyle.AppCodeStyleSettingsManager_Binding"
+    },
+    {
+      "type": "consulo.language.codeStyle.ProjectCodeStyleSettingsManager_Binding"
+    },
+    {
+      "type": "consulo.language.content.ProductionContentFolderTypeProvider_Binding"
+    },
+    {
+      "type": "consulo.language.content.ProductionResourceContentFolderTypeProvider_Binding"
+    },
+    {
+      "type": "consulo.language.content.TestContentFolderTypeProvider_Binding"
+    },
+    {
+      "type": "consulo.language.content.TestResourceContentFolderTypeProvider_Binding"
+    },
+    {
+      "type": "consulo.language.editor.CodeInsightSettings_Binding"
+    },
+    {
+      "type": "consulo.language.editor.DaemonListener_Binding"
+    },
+    {
+      "type": "consulo.language.editor.codeVision.CodeVisionSettingsListener_Binding"
+    },
+    {
+      "type": "consulo.language.editor.codeVision.CodeVisionSettings_Binding"
+    },
+    {
+      "type": "consulo.language.editor.documentation.DocumentationManagerUtil_Binding"
+    },
+    {
+      "type": "consulo.language.editor.highlight.FileHighlightingSettingListener_Binding"
+    },
+    {
+      "type": "consulo.language.editor.inspection.scheme.event.ProfileChangeAdapter_Binding"
+    },
+    {
+      "type": "consulo.language.editor.internal.EditorTrackerEditorFactoryListener_Binding"
+    },
+    {
+      "type": "consulo.language.editor.internal.EditorTrackerListener_Binding"
+    },
+    {
+      "type": "consulo.language.editor.internal.HighlightingSettingsPerFile_Binding"
+    },
+    {
+      "type": "consulo.language.editor.internal.InlayHintsSettings_Binding"
+    },
+    {
+      "type": "consulo.language.editor.internal.InspectionCacheService_Binding"
+    },
+    {
+      "type": "consulo.language.editor.internal.LanguageBraceMatcherExtender_Binding"
+    },
+    {
+      "type": "consulo.language.editor.internal.ParameterNameHintsSettings_Binding"
+    },
+    {
+      "type": "consulo.language.editor.internal.intention.IntentionManagerSettings_Binding"
+    },
+    {
+      "type": "consulo.language.editor.postfixTemplate.PostfixTemplatesSettings_Binding"
+    },
+    {
+      "type": "consulo.language.editor.scope.NamedScopeManager_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.context.EverywhereContextType_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.CapitalizeAndUnderscoreMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.CapitalizeMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.ClassNameCompleteMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.CompleteMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.CompleteSmartMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.CurrentDateMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.CurrentTimeMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.CurrentUserMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.DecapitalizeMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.EnumMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.FileNameMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.FileNameWithoutExtensionMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.FirstWordMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.LineNumberMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.ReplaceUnderscoresToCamelCaseMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.template.macro.ReplaceUnderscoresWithSpacesMacro_Binding"
+    },
+    {
+      "type": "consulo.language.editor.todo.TodoConfigurationListener_Binding"
+    },
+    {
+      "type": "consulo.language.editor.todo.TodoConfiguration_Binding"
+    },
+    {
+      "type": "consulo.language.editor.ui.internal.ComboEditorCompletionContributor_Binding"
+    },
+    {
+      "type": "consulo.language.editor.ui.internal.scope.CustomScopeItemPresenter_Binding"
+    },
+    {
+      "type": "consulo.language.editor.ui.internal.scope.ModuleScopeItemPresenter_Binding"
+    },
+    {
+      "type": "consulo.language.editor.ui.internal.scope.OtherScopeItemPresenter_Binding"
+    },
+    {
+      "type": "consulo.language.editor.ui.internal.scope.ProjectScopeItemPresenter_Binding"
+    },
+    {
+      "type": "consulo.language.editor.ui.scope.AnalysisUIOptions_Binding"
+    },
+    {
+      "type": "consulo.language.editor.wolfAnalyzer.ProblemListener_Binding"
+    },
+    {
+      "type": "consulo.language.ignore.cache.PatternCache_Binding"
+    },
+    {
+      "type": "consulo.language.impl.ast.CompositeElement",
+      "fields": [
+        {
+          "name": "myWrapper"
+        }
+      ]
+    },
+    {
+      "type": "consulo.language.impl.file.SingleRootFileViewProvider",
+      "fields": [
+        {
+          "name": "myPsiFile"
+        }
+      ]
+    },
+    {
+      "type": "consulo.language.impl.internal.LockedIconDescriptorUpdater_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.ProjectFileIndexFacade_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.PsiCommentManipulator_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.PsiFileDataValidator_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.PsiPackageManagerImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.ResolveScopeManagerImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.ast.ASTElementFactoryImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.ast.DefaultASTCompositeFactory_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.ast.DefaultASTLazyFactory_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.ast.DefaultASTLeafFactory_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.ast.DefaultPsiElementFactory_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.cacheBuilder.CacheBuilderRegistryImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.cacheBuilder.IndexCacheManagerImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.content.scope.ModuleScopeProviderImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.content.scope.ProjectScopeProviderImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.dataRule.PsiFileRule_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.file.GlobalPsiVFSBulkFileListener_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.file.PsiVFSListenerStartUpActivity_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.file.PsiVFSListener_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.parser.PsiBuilderFactoryImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.plain.PlainFileManipulator_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.plain.PlainTextASTLeafFactory_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.plain.PlainTextFileTypeFactory_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.pom.PomDefinitionSearch_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.pom.PomModelImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.pom.PomServiceImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.pom.PsiEventWrapperAspect_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.DocumentCommitThread_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.PsiAnchorFactoryImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.PsiDocumentTransactionListener_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.PsiFileFactoryImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.PsiModificationTrackerImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.PsiModificationTrackerTreePreprocessor_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.PsiPackageHelperImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.PsiParserFacadeImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.diff.BlockSupportImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.include.FileIncludeIndex_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.include.FileIncludeManagerImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.meta.MetaRegistryImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.path.GenericDynamicContextProvider_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.path.PathReferenceManagerImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.pointer.SmartPointerManagerImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.resolve.ResolveCacheImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.resolve.reference.CommentsReferenceContributor_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.resolve.reference.PsiReferenceServiceImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.resolve.reference.ReferenceProvidersRegistryImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.search.CachesBasedRefSearcher_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.psi.stub.PlainTextTodoIndexer_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.sem.SemServiceImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.template.TemplateDataLanguageMappingsImpl_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.template.TemplateDataLanguagePatterns_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.template.TemplateDataLanguagePusher_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.util.NoAccessDuringPsiEvents_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.util.proximity.SameDirectoryWeigher_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.util.proximity.SameModuleWeigher_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.util.proximity.SameSourceRootWeigher_Binding"
+    },
+    {
+      "type": "consulo.language.impl.internal.util.proximity.SdkOrLibraryWeigher_Binding"
+    },
+    {
+      "type": "consulo.language.impl.plain.PlainTextParserDefinition_Binding"
+    },
+    {
+      "type": "consulo.language.impl.psi.PsiFileImpl",
+      "fields": [
+        {
+          "name": "myTrees"
+        }
+      ]
+    },
+    {
+      "type": "consulo.language.internal.LanguageRegistryImpl_Binding"
+    },
+    {
+      "type": "consulo.language.pom.TreeAspect_Binding"
+    },
+    {
+      "type": "consulo.language.psi.AnyPsiChangeListener_Binding"
+    },
+    {
+      "type": "consulo.language.psi.PsiModificationTrackerListener_Binding"
+    },
+    {
+      "type": "consulo.language.psi.event.PsiDocumentListener_Binding"
+    },
+    {
+      "type": "consulo.language.psi.path.NullFileReferenceHelper_Binding"
+    },
+    {
+      "type": "consulo.language.psi.scope.LibraryScopeCache_Binding"
+    },
+    {
+      "type": "consulo.language.psi.search.IndexPatternChangeListener_Binding"
+    },
+    {
+      "type": "consulo.logging.sfl4j.spi.ConsuloSLF4JServiceProvider"
+    },
+    {
+      "type": "consulo.module.content.internal.ModuleIconService_Binding"
+    },
+    {
+      "type": "consulo.module.content.layer.event.ModuleRootLayerListener_Binding"
+    },
+    {
+      "type": "consulo.module.content.layer.event.ModuleRootListener_Binding"
+    },
+    {
+      "type": "consulo.module.event.ModuleListener_Binding"
+    },
+    {
+      "type": "consulo.project.event.DumbModeListenerBackgroundable_Binding"
+    },
+    {
+      "type": "consulo.project.event.DumbModeListener_Binding"
+    },
+    {
+      "type": "consulo.project.event.ProjectManagerListener_Binding"
+    },
+    {
+      "type": "consulo.project.internal.ProjectExListener_Binding"
+    },
+    {
+      "type": "consulo.project.ui.action.NextOccurenceAction_Binding"
+    },
+    {
+      "type": "consulo.project.ui.action.PreviousOccurenceAction_Binding"
+    },
+    {
+      "type": "consulo.project.ui.notification.event.NotificationServiceListener_Binding"
+    },
+    {
+      "type": "consulo.project.ui.view.SelectInManager_Binding"
+    },
+    {
+      "type": "consulo.project.ui.wm.ToolWindowManagerListener_Binding"
+    },
+    {
+      "type": "consulo.project.ui.wm.event.ApplicationActivationListener_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightApplicationEncodingManager_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightCachedValuesManager_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightChangesView_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightConfigurableForeignComponentSearch_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightDocumentCommitProcessor_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightDumbService_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightEncodingProjectManager_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightFileDocumentManager_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightFileIndexFacade_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightFileTypeRegistry",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "consulo.test.light.impl.LightHierarchyBrowserFactory_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightJobLauncher_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightLineStatusMarkerPopupFactory_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightLocalFileSystem_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightParameterHandlerPopupProxyFactory_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightPathMacros_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightPlatformInternal"
+    },
+    {
+      "type": "consulo.test.light.impl.LightPluginManager"
+    },
+    {
+      "type": "consulo.test.light.impl.LightProjectScopeProvider_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightPsiDocumentManager_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightPsiManager_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightPsiSearchHelper_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightRawFileLoader_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightTreeAnchorizer_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightUiActivityMonitor_Binding"
+    },
+    {
+      "type": "consulo.test.light.impl.LightVirtualFileManager_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.RecentsManager_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.action.CloseAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.action.ContextHelpAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.action.RefreshAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.action.event.AnActionListener_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.action.touchBar.TouchBarActionGroup_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.action.touchBar.TouchBarDefaultActionGroup_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.action.touchBar.TouchBarDefaultAltActionGroup_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.action.touchBar.TouchBarDefaultCmdActionGroup_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.action.touchBar.TouchBarDefaultCmdAltActionGroup_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.action.touchBar.TouchBarDefaultCtrlActionGroup_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.action.touchBar.TouchBarDefaultOptionalGroup_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.action.touchBar.TouchBarDefaultShiftActionGroup_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.awt.MasterDetailsStateService_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.awt.internal.ModalityPerProjectEAPDescriptor_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.awt.internal.MouseGestureManager_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.DataGridSettingsListener_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.action.AddColumnAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.action.AddRowAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.action.ClearCellsAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.action.CloneColumnAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.action.CloneRowAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.action.DeleteColumnsAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.action.DeleteRowsAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.action.InsertColumnAfterAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.action.InsertColumnBeforeAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.action.InsertRowAfterAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.action.InsertRowBeforeAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.action.RenameColumnAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.action.SetFirstRowIsHeaderAction_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.action.TableResultColumnHeaderPopupGroup_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.action.TableResultPopupGroup_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.csv.CsvFormatsSettingsListener_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.grid.csv.CsvSettings_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.internal.ActionCustomizerViaActionPreInitializer_Binding"
+    },
+    {
+      "type": "consulo.ui.ex.internal.NoneTouchBarFacade_Binding"
+    },
+    {
+      "type": "consulo.ui.impl.style.StyleManagerService_Binding"
+    },
+    {
+      "type": "consulo.undoRedo.event.CommandListener_Binding"
+    },
+    {
+      "type": "consulo.usage.UsageViewSettings_Binding"
+    },
+    {
+      "type": "consulo.usage.rule.UsageFilteringRuleListener_Binding"
+    },
+    {
+      "type": "consulo.util.collection.impl.list.LockFreeCopyOnWriteArrayList",
+      "fields": [
+        {
+          "name": "array"
+        }
+      ]
+    },
+    {
+      "type": "consulo.util.collection.impl.map.ConcurrentHashMap",
+      "fields": [
+        {
+          "name": "baseCount"
+        },
+        {
+          "name": "cellsBusy"
+        },
+        {
+          "name": "sizeCtl"
+        },
+        {
+          "name": "transferIndex"
+        }
+      ]
+    },
+    {
+      "type": "consulo.util.collection.impl.map.ConcurrentHashMap$CounterCell",
+      "fields": [
+        {
+          "name": "value"
+        }
+      ]
+    },
+    {
+      "type": "consulo.util.collection.primitive.ints.impl.map.ConcurrentIntObjectHashMap",
+      "fields": [
+        {
+          "name": "baseCount"
+        },
+        {
+          "name": "cellsBusy"
+        },
+        {
+          "name": "sizeCtl"
+        },
+        {
+          "name": "transferIndex"
+        }
+      ]
+    },
+    {
+      "type": "consulo.util.collection.primitive.ints.impl.map.ConcurrentIntObjectHashMap$CounterCell",
+      "fields": [
+        {
+          "name": "value"
+        }
+      ]
+    },
+    {
+      "type": "consulo.util.dataholder.UserDataHolderBase",
+      "fields": [
+        {
+          "name": "myUserMap"
+        }
+      ]
+    },
+    {
+      "type": "consulo.versionControlSystem.IssueNavigationConfiguration_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.PluginVcsMappingListener_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.VcsApplicationSettings_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.VcsConfiguration_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.VcsMappingListener_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.VcsNotifier_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.annotate.VcsCacheManager_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.change.ChangeListListener_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.change.ChangesViewContentManagerListener_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.change.VcsAnnotationRefresher_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.change.VcsManagedFilesHolderListener_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.change.commited.CommittedChangesListener_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.change.commited.CommittedChangesReloadListener_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.change.commited.VcsBranchMappingChangedDetailedNotification_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.change.shelf.ShelveChangesListener_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.commit.CommitModeListener_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.commit.CommitModeSettingsListener_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.internal.DefaultProjectChangesView_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.internal.RemoteRevisionChangeListener_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.internal.UpdatedFilesListener_Binding"
+    },
+    {
+      "type": "consulo.versionControlSystem.virtualFileSystem.VcsFileSystem_Binding"
+    },
+    {
+      "type": "consulo.virtualFileSystem.encoding.EncodingManagerListener_Binding"
+    },
+    {
+      "type": "consulo.virtualFileSystem.event.BatchFileChangeListener_Binding"
+    },
+    {
+      "type": "consulo.virtualFileSystem.event.BulkFileListenerBackgroundable_Binding"
+    },
+    {
+      "type": "consulo.virtualFileSystem.event.BulkFileListener_Binding"
+    },
+    {
+      "type": "consulo.virtualFileSystem.event.VirtualFileListener_Binding"
+    },
+    {
+      "type": "consulo.virtualFileSystem.fileType.FileTypeListener_Binding"
+    },
+    {
+      "type": "consulo.virtualFileSystem.pointer.VirtualFilePointerListener_Binding"
+    },
+    {
+      "type": "consulo.virtualFileSystem.status.FileStatusListener_Binding"
+    },
+    {
+      "type": "groovy.lang.Closure"
+    },
+    {
+      "type": "java.io.ObjectInputStream"
+    },
+    {
+      "type": "java.io.ObjectOutputStream"
+    },
+    {
+      "type": "java.lang.Boolean",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "getBoolean",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.Byte"
+    },
+    {
+      "type": "java.lang.Character"
+    },
+    {
+      "type": "java.lang.Class"
+    },
+    {
+      "type": "java.lang.Double"
+    },
+    {
+      "type": "java.lang.Float"
+    },
+    {
+      "type": "java.lang.Integer"
+    },
+    {
+      "type": "java.lang.Long"
+    },
+    {
+      "type": "java.lang.Number"
+    },
+    {
+      "type": "java.lang.Object"
+    },
+    {
+      "type": "java.lang.Short"
+    },
+    {
+      "type": "java.lang.String"
+    },
+    {
+      "type": "java.lang.reflect.RecordComponent"
+    },
+    {
+      "type": "java.math.BigInteger"
+    },
+    {
+      "type": "java.nio.file.Path"
+    },
+    {
+      "type": "java.nio.file.Paths",
+      "methods": [
+        {
+          "name": "get",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.String[]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.security.AlgorithmParametersSpi"
+    },
+    {
+      "type": "java.security.KeyStoreSpi"
+    },
+    {
+      "type": "java.sql.Connection"
+    },
+    {
+      "type": "java.sql.Date"
+    },
+    {
+      "type": "java.sql.Driver"
+    },
+    {
+      "type": "java.sql.DriverManager"
+    },
+    {
+      "type": "java.sql.Time"
+    },
+    {
+      "type": "java.sql.Timestamp"
+    },
+    {
+      "type": "java.time.Duration"
+    },
+    {
+      "type": "java.time.Instant"
+    },
+    {
+      "type": "java.time.LocalDate"
+    },
+    {
+      "type": "java.time.LocalDateTime"
+    },
+    {
+      "type": "java.time.LocalTime"
+    },
+    {
+      "type": "java.time.MonthDay"
+    },
+    {
+      "type": "java.time.OffsetDateTime"
+    },
+    {
+      "type": "java.time.OffsetTime"
+    },
+    {
+      "type": "java.time.Period"
+    },
+    {
+      "type": "java.time.Year"
+    },
+    {
+      "type": "java.time.YearMonth"
+    },
+    {
+      "type": "java.time.ZoneId"
+    },
+    {
+      "type": "java.time.ZoneOffset"
+    },
+    {
+      "type": "java.time.ZonedDateTime"
+    },
+    {
+      "type": "java.util.Collections$UnmodifiableMap"
+    },
+    {
+      "type": "java.util.Date"
+    },
+    {
+      "type": "org.javamaster.httpclient.highlighting.HttpHighlighterProvider_Binding"
+    },
+    {
+      "type": "org.javamaster.httpclient.highlighting.support.HttpSyntaxHighlighterFactory_Binding"
+    },
+    {
+      "type": "org.javamaster.httpclient.parser.HttpParserDefinition_Binding"
+    },
+    {
+      "type": "org.mozilla.javascript.Context"
+    },
+    {
+      "type": "org.mozilla.javascript.ContextFactory"
+    },
+    {
+      "type": "org.mozilla.javascript.Function"
+    },
+    {
+      "type": "org.mozilla.javascript.Interpreter",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.mozilla.javascript.JavaAdapter"
+    },
+    {
+      "type": "org.mozilla.javascript.ScriptableObject"
+    },
+    {
+      "type": "org.mozilla.javascript.optimizer.Codegen"
+    },
+    {
+      "type": "org.mozilla.javascript.regexp.RegExpLoaderImpl"
+    },
+    {
+      "type": "picocli.CommandLine$AutoHelpMixin"
+    },
+    {
+      "type": "sun.security.pkcs12.PKCS12KeyStore",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.pkcs12.PKCS12KeyStore$DualFormatPKCS12",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.DSA$SHA224withDSA",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.DSA$SHA256withDSA",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.NativePRNG",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.security.SecureRandomParameters"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA2$SHA224",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA2$SHA256",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA5$SHA384",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA5$SHA512",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.X509Factory",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.rsa.PSSParameters",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.rsa.RSAKeyFactory$Legacy",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.rsa.RSAPSSSignature",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.rsa.RSASignature$SHA224withRSA",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.ssl.KeyManagerFactoryImpl$SunX509",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.ssl.SSLContextImpl$DefaultSSLContext",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.ssl.TrustManagerFactoryImpl$PKIXFactory",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.AuthorityInfoAccessExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.AuthorityKeyIdentifierExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.BasicConstraintsExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.CRLDistributionPointsExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.CertificatePoliciesExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.KeyUsageExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.SubjectAlternativeNameExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.SubjectKeyIdentifierExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData"
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData_en"
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData_en_US"
+    },
+    {
+      "type": "sun.util.resources.cldr.CalendarData"
+    },
+    {
+      "type": {
+        "proxy": [
+          "consulo.language.psi.PsiModificationTrackerListener"
+        ]
+      }
+    },
+    {
+      "type": {
+        "proxy": [
+          "consulo.virtualFileSystem.event.VirtualFileListener"
+        ]
+      }
+    }
+  ],
+  "resources": [
+    {
+      "glob": "LOCALIZE-LIB/en_US/consulo.httpClient.HttpClientLocalize.yaml"
+    },
+    {
+      "glob": "META-INF/services/consulo.component.bind.InjectingBinding"
+    },
+    {
+      "glob": "META-INF/services/consulo.component.bind.TopicBinding"
+    },
+    {
+      "glob": "META-INF/services/consulo.component.internal.inject.RootInjectingContainerFactory"
+    },
+    {
+      "glob": "META-INF/services/consulo.container.internal.PluginManagerInternal"
+    },
+    {
+      "glob": "META-INF/services/consulo.disposer.internal.DisposerInternal"
+    },
+    {
+      "glob": "META-INF/services/consulo.localize.LocalizeManager"
+    },
+    {
+      "glob": "META-INF/services/consulo.platform.internal.PlatformInternal"
+    },
+    {
+      "glob": "META-INF/services/java.net.spi.URLStreamHandlerProvider"
+    },
+    {
+      "glob": "META-INF/services/java.nio.channels.spi.SelectorProvider"
+    },
+    {
+      "glob": "META-INF/services/java.util.spi.ResourceBundleControlProvider"
+    },
+    {
+      "glob": "META-INF/services/org.mozilla.javascript.RegExpLoader"
+    },
+    {
+      "glob": "META-INF/services/org.mozilla.javascript.config.RhinoPropertiesLoader"
+    },
+    {
+      "glob": "META-INF/services/org.mozilla.javascript.xml.XMLLoader"
+    },
+    {
+      "glob": "META-INF/services/org.slf4j.spi.SLF4JServiceProvider"
+    },
+    {
+      "glob": "consulo/application/registry.properties"
+    },
+    {
+      "glob": "consulo/application/registry_en.properties"
+    },
+    {
+      "glob": "consulo/application/registry_en_US.properties"
+    },
+    {
+      "glob": "consulo/httpClient/script/rhino/bootstrap.js"
+    },
+    {
+      "glob": "org/javamaster/httpclient/nls/HttpClientBundle.properties"
+    },
+    {
+      "glob": "org/javamaster/httpclient/nls/HttpClientBundle_en.properties"
+    },
+    {
+      "glob": "org/javamaster/httpclient/nls/HttpClientBundle_en_US.properties"
+    },
+    {
+      "glob": "rhino-test.config"
+    },
+    {
+      "glob": "rhino.config"
+    },
+    {
+      "bundle": "consulo.application.registry"
+    },
+    {
+      "bundle": "org.javamaster.httpclient.nls.HttpClientBundle"
+    }
+  ]
+}

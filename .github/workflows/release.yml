@@ -1,0 +1,132 @@
+name: Release
+
+# 1. version.txt 1.2.0-SNAPSHOT -> 1.2.0, committed as "Release hrx 1.2.0"
+# 2. native binaries for all platforms built and tested from that commit
+# 3. GitHub release v1.2.0 with the archives and SHA256SUMS
+# 4. version.txt -> next snapshot (1.2.1-SNAPSHOT), committed
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Release version. Empty - version.txt without -SNAPSHOT
+        required: false
+        default: ''
+      next-version:
+        description: Next development version. Empty - next patch version with -SNAPSHOT
+        required: false
+        default: ''
+      http-client-ref:
+        description: Branch, tag or commit of consulo/consulo-http-client
+        required: false
+        default: master
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    outputs:
+      version: ${{ steps.versions.outputs.version }}
+      next-version: ${{ steps.versions.outputs.next }}
+      sha: ${{ steps.commit.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Compute versions
+        id: versions
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
+          INPUT_NEXT: ${{ inputs.next-version }}
+        run: |
+          current=$(tr -d '[:space:]' < version.txt)
+          version="${INPUT_VERSION:-${current%-SNAPSHOT}}"
+          if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Release version '$version' is not MAJOR.MINOR.PATCH"
+            exit 1
+          fi
+          if git ls-remote --exit-code --tags origin "refs/tags/v${version}" > /dev/null; then
+            echo "::error::Tag v${version} already exists"
+            exit 1
+          fi
+          IFS=. read -r major minor patch <<< "$version"
+          next="${INPUT_NEXT:-${major}.${minor}.$((patch + 1))-SNAPSHOT}"
+          if [[ "$next" != *-SNAPSHOT ]]; then
+            echo "::error::Next version '$next' must end with -SNAPSHOT"
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "next=$next" >> "$GITHUB_OUTPUT"
+          echo "Releasing $version, next development version $next"
+
+      - name: Commit release version
+        id: commit
+        env:
+          VERSION: ${{ steps.versions.outputs.version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          echo "$VERSION" > version.txt
+          # a rerun after a failed build finds the release version already committed
+          if ! git diff --quiet version.txt; then
+            git commit -m "Release hrx $VERSION" version.txt
+            git push origin HEAD
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  native:
+    needs: prepare
+    uses: ./.github/workflows/native.yml
+    with:
+      ref: ${{ needs.prepare.outputs.sha }}
+      http-client-ref: ${{ inputs.http-client-ref }}
+
+  publish:
+    needs: [prepare, native]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: hrx-*
+          path: dist
+          merge-multiple: true
+
+      - name: Checksums
+        working-directory: dist
+        run: sha256sum hrx-* > SHA256SUMS && cat SHA256SUMS
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ needs.prepare.outputs.version }}
+          SHA: ${{ needs.prepare.outputs.sha }}
+        run: |
+          gh release create "v${VERSION}" dist/* \
+            --repo "${{ github.repository }}" \
+            --target "$SHA" \
+            --title "hrx ${VERSION}" \
+            --generate-notes
+
+  next-snapshot:
+    needs: [prepare, publish]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Commit next development version
+        env:
+          NEXT: ${{ needs.prepare.outputs.next-version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          echo "$NEXT" > version.txt
+          git commit -m "Prepare next development version $NEXT" version.txt
+          git push origin HEAD
