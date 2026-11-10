@@ -165,15 +165,37 @@ distributions {
     }
 }
 
-// cmd.exe limits a line to 8191 characters, too short for ~100 jar paths in hrx.bat:
-// use a wildcard, with the hrx jar first (its META-INF/services must win, see HttpCliLocalizeManager)
+// cmd.exe limits a line to 8191 characters, too short for ~100 jar paths in hrx.bat. A wildcard (lib\*) loses the
+// order, and the order matters: several platform services are picked by ServiceLoader order (LightPluginManager,
+// HttpCliLocalizeManager). So hrx.bat uses a pathing jar - its manifest Class-Path lists all jars in order.
+val pathingJar by tasks.registering(Jar::class) {
+    archiveClassifier = "pathing"
+    val mainJarName = tasks.jar.flatMap { it.archiveFileName }
+    val runtimeJars = configurations.runtimeClasspath
+    doFirst {
+        val classPath = listOf(mainJarName.get()) + runtimeJars.get().files.map { it.name }
+        manifest.attributes["Class-Path"] = classPath.joinToString(" ")
+    }
+}
+
+distributions {
+    main {
+        contents {
+            into("lib") {
+                from(pathingJar)
+            }
+        }
+    }
+}
+
 tasks.startScripts {
+    val pathingJarName = pathingJar.flatMap { it.archiveFileName }
+    inputs.property("pathingJarName", pathingJarName)
     doLast {
-        val jarName = tasks.jar.get().archiveFileName.get()
         windowsScript.writeText(
             windowsScript.readText().replace(
                 Regex("(?m)^set CLASSPATH=.*$"),
-                Regex.escapeReplacement("set CLASSPATH=%APP_HOME%\\lib\\$jarName;%APP_HOME%\\lib\\*")
+                Regex.escapeReplacement("set CLASSPATH=%APP_HOME%\\lib\\" + pathingJarName.get())
             )
         )
     }
