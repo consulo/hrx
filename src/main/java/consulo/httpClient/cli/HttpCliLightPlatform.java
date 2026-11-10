@@ -2,8 +2,6 @@ package consulo.httpClient.cli;
 
 import consulo.application.Application;
 import consulo.disposer.AutoDisposable;
-import consulo.http.HttpCertificateManager;
-import consulo.http.HttpProxyManager;
 import consulo.language.psi.PsiFile;
 import consulo.language.psi.PsiManager;
 import consulo.project.Project;
@@ -31,8 +29,8 @@ public final class HttpCliLightPlatform implements AutoCloseable {
     private final Application myApplication;
     private final Project myProject;
 
-    public HttpCliLightPlatform(HttpProxyManager proxyManager, HttpCertificateManager certificateManager) {
-        myApplication = HttpCliApplication.create(myDisposable, proxyManager, certificateManager);
+    public HttpCliLightPlatform() {
+        myApplication = HttpCliApplication.create(myDisposable);
 
         LightFileTypeRegistry fileTypeRegistry = (LightFileTypeRegistry) myApplication.getInstance(FileTypeRegistry.class);
         fileTypeRegistry.registerFileType(HttpFileType.INSTANCE, "http");

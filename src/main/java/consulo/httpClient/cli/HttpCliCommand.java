@@ -7,6 +7,7 @@ import consulo.httpClient.execution.runner.HttpRequestRunResult;
 import consulo.httpClient.execution.runner.HttpRequestRunner;
 import org.javamaster.httpclient.impl.js.HttpScriptTestResult;
 import consulo.http.HttpRequestBuilderFactory;
+import consulo.http.impl.internal.HttpRequestBuilderFactoryImpl;
 import consulo.language.psi.util.PsiTreeUtil;
 import org.javamaster.httpclient.parser.HttpFile;
 import org.javamaster.httpclient.psi.HttpMethod;
@@ -124,8 +125,13 @@ public class HttpCliCommand implements Callable<Integer> {
         int failedTests = 0;
 
         HttpCliRemoteAgent remoteAgent = null;
-        try (HttpCliLightPlatform platform = new HttpCliLightPlatform(new HttpCliProxyManager(myProxy), new HttpCliCertificateManager(myInsecure))) {
-            HttpRequestBuilderFactory requestBuilderFactory = platform.getApplication().getInstance(HttpRequestBuilderFactory.class);
+        try (HttpCliLightPlatform platform = new HttpCliLightPlatform()) {
+            // the platform http stack (consulo-http-impl) with proxy and certificates from the command line
+            HttpRequestBuilderFactory requestBuilderFactory = new HttpRequestBuilderFactoryImpl(
+                platform.getApplication(),
+                new HttpCliProxyManager(myProxy),
+                new HttpCliCertificateManager(myInsecure)
+            );
             if (myDockerMode) {
                 requestBuilderFactory = new DockerHostRequestBuilderFactory(requestBuilderFactory);
             }

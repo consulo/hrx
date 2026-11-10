@@ -18,12 +18,10 @@ import java.security.cert.X509Certificate;
  * @since 2026-11-03
  */
 public final class HttpCliCertificateManager implements HttpCertificateManager {
-    private final boolean myInsecure;
     private final HttpConfirmingTrustManagerHttp myTrustManager;
     private final SSLContext mySslContext;
 
     public HttpCliCertificateManager(boolean insecure) {
-        myInsecure = insecure;
         if (insecure) {
             // java.net.http reads it once, when its first client is created
             System.setProperty("jdk.internal.httpclient.disableHostnameVerification", "true");
@@ -52,11 +50,6 @@ public final class HttpCliCertificateManager implements HttpCertificateManager {
         catch (GeneralSecurityException e) {
             throw new IllegalStateException(e);
         }
-    }
-
-    @Override
-    public HostnameVerifier getHostnameVerifier() {
-        return myInsecure ? (hostname, session) -> true : HttpsURLConnection.getDefaultHostnameVerifier();
     }
 
     @Override

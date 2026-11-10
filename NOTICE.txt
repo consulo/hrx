@@ -18,8 +18,6 @@ Origin of the code
 ---------------------------------------------------------------------------
 
  * Consulo platform https://github.com/consulo/consulo - Apache 2.
-   The package consulo.httpClient.cli.http is copied from the module
-   consulo-http-impl (consulo.http.impl.internal) of the platform.
  * HTTP Client plugin https://github.com/consulo/consulo-http-client - parser,
    request execution and the handler script engine are used from it.
    Initial code from https://github.com/jufeng98/HttpClient - MIT License,

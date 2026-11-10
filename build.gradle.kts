@@ -44,6 +44,8 @@ dependencies {
         exclude(group = "net.java.dev.jna")
     }
     implementation("consulo:consulo-http-api:$consuloVersion")
+    // platform http stack: java.net.http executor, remote platform senders
+    implementation("consulo:consulo-http-impl:$consuloVersion")
     // --agent: requests sent by a Consulo remote agent (gRPC), RemoteAgentHttpRequestSender
     implementation("consulo:consulo-remote-server-agent-impl:$consuloVersion")
     implementation("consulo:consulo-util-nodep:$consuloVersion")

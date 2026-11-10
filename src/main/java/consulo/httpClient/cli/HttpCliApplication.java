@@ -4,10 +4,6 @@ import consulo.application.Application;
 import consulo.component.internal.ComponentBinding;
 import consulo.component.internal.inject.*;
 import consulo.disposer.Disposable;
-import consulo.http.HttpCertificateManager;
-import consulo.http.HttpProxyManager;
-import consulo.http.HttpRequestBuilderFactory;
-import consulo.httpClient.cli.http.HttpRequestBuilderFactoryImpl;
 import consulo.test.light.LightApplicationBuilder;
 import consulo.test.light.impl.LightApplication;
 import consulo.util.lang.function.ThrowableSupplier;
@@ -27,38 +23,14 @@ import java.util.function.Supplier;
 public final class HttpCliApplication extends LightApplication {
     private final ThreadLocal<int[]> myReadActionDepth = ThreadLocal.withInitial(() -> new int[1]);
 
-    /**
-     * Assigned after the super constructor, which registers services; the providers below are lazy.
-     */
-    private HttpProxyManager myProxyManager;
-    private HttpCertificateManager myCertificateManager;
-
-    private HttpCliApplication(Disposable lastDisposable,
-                               ComponentBinding componentBinding,
-                               HttpProxyManager proxyManager,
-                               HttpCertificateManager certificateManager) {
+    private HttpCliApplication(Disposable lastDisposable, ComponentBinding componentBinding) {
         super(lastDisposable, componentBinding, new LightApplicationBuilder.DefaultRegistrator());
-        myProxyManager = proxyManager;
-        myCertificateManager = certificateManager;
-    }
-
-    /**
-     * Http services of the platform, implemented by the command line client (consulo-http-impl is not on the class path).
-     */
-    @Override
-    protected void registerServices(InjectingContainerBuilder builder) {
-        super.registerServices(builder);
-
-        builder.bind(HttpProxyManager.class).forceSingleton().to(() -> myProxyManager);
-        builder.bind(HttpCertificateManager.class).forceSingleton().to(() -> myCertificateManager);
-        builder.bind(HttpRequestBuilderFactory.class).forceSingleton()
-            .to(() -> new HttpRequestBuilderFactoryImpl(this, myProxyManager, myCertificateManager));
     }
 
     /**
      * Same as {@link LightApplicationBuilder#build()}, creating this class instead of {@link LightApplication}.
      */
-    public static Application create(Disposable rootDisposable, HttpProxyManager proxyManager, HttpCertificateManager certificateManager) {
+    public static Application create(Disposable rootDisposable) {
         NewInjectingBindingCollector injectingBindingCollector = new NewInjectingBindingCollector();
         NewTopicBindingCollector topicBindingCollector = new NewTopicBindingCollector();
         NewBindingLoader loader = new NewBindingLoader(injectingBindingCollector, topicBindingCollector);
@@ -73,8 +45,7 @@ public final class HttpCliApplication extends LightApplication {
             injectingBindingCollector.getActions()
         );
         TopicBindingLoader topicBindingLoader = new TopicBindingLoader(topicBindingCollector.getBindings());
-        return new HttpCliApplication(rootDisposable, new ComponentBinding(injectingBindingLoader, topicBindingLoader), proxyManager,
-            certificateManager);
+        return new HttpCliApplication(rootDisposable, new ComponentBinding(injectingBindingLoader, topicBindingLoader));
     }
 
     @Override
