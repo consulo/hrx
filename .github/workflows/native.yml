@@ -38,10 +38,6 @@ jobs:
           - name: windows-x86_64
             runner: windows-2025
             experimental: false
-          # GraalVM support for Windows on ARM is not final yet
-          - name: windows-aarch64
-            runner: windows-11-arm
-            experimental: true
 
     defaults:
       run:

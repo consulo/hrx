@@ -165,6 +165,20 @@ distributions {
     }
 }
 
+// cmd.exe limits a line to 8191 characters, too short for ~100 jar paths in hrx.bat:
+// use a wildcard, with the hrx jar first (its META-INF/services must win, see HttpCliLocalizeManager)
+tasks.startScripts {
+    doLast {
+        val jarName = tasks.jar.get().archiveFileName.get()
+        windowsScript.writeText(
+            windowsScript.readText().replace(
+                Regex("(?m)^set CLASSPATH=.*$"),
+                Regex.escapeReplacement("set CLASSPATH=%APP_HOME%\\lib\\$jarName;%APP_HOME%\\lib\\*")
+            )
+        )
+    }
+}
+
 application {
     mainClass = "consulo.httpClient.cli.HttpCliMain"
     applicationName = "hrx"
